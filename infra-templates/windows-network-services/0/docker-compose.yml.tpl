@@ -1,5 +1,5 @@
-{{- $windowsMetadataImage:="rancher/metadata-windows:v0.1.0"}}
-{{- $windowsDNSImage:="rancher/dns-windows:v0.1.0"}}
+{{- $windowsMetadataImage:="rancher/metadata-windows:v0.10.0"}}
+{{- $windowsDNSImage:="rancher/dns-windows:v0.17.0"}}
 
 version: '2'
 services:
