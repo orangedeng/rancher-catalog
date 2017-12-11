@@ -1,5 +1,5 @@
 name: Kubernetes
-version: v1.8.3-rancher3-1
+version: v1.8.5-rancher1
 category: Orchestration
 labels:
   io.rancher.certified: rancher
