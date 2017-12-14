@@ -1,8 +1,7 @@
 .catalog:
   name: "Rancher IPsec"
-  version: "0.2.1"
-  minimum_rancher_version: v1.6.11-rc1
-  maximum_rancher_version: v1.6.12
+  version: "0.2.2"
+  minimum_rancher_version: v1.6.13-rc1
   questions:
     - variable: "DOCKER_BRIDGE"
       label: "Docker Bridge"
@@ -70,3 +69,15 @@
       type: "string"
       default: '1h'
       required: true
+
+ipsec:
+  health_check:
+    request_line: GET "/connectivity" "HTTP/1.0"
+    port: 80
+    interval: 5000
+    initializing_timeout: 60000
+    reinitializing_timeout: 60000
+    response_timeout: 2000
+    healthy_threshold: 2
+    unhealthy_threshold: 3
+    strategy: none
