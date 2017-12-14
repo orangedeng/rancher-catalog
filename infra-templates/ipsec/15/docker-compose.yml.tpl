@@ -1,6 +1,6 @@
 version: '2'
 
-{{- $netImage:="rancher/net:v0.13.5" }}
+{{- $netImage:="rancher/net:v0.13.6" }}
 
 services:
   ipsec:
@@ -12,7 +12,7 @@ services:
       - 500:500/udp
       - 4500:4500/udp
     labels:
-      io.rancher.sidekicks: router
+      io.rancher.sidekicks: router,connectivity-check
       io.rancher.scheduler.global: 'true'
       io.rancher.cni.link_mtu_overhead: '0'
       io.rancher.network.macsync: 'true'
@@ -41,6 +41,11 @@ services:
       net.ipv4.conf.default.send_redirects: '0'
       net.ipv4.conf.eth0.send_redirects: '0'
       net.ipv4.xfrm4_gc_thresh: '2147483647'
+  connectivity-check:
+    image: {{$netImage}}
+    command:
+      - connectivity-check
+    network_mode: container:ipsec
   cni-driver:
     privileged: true
     image: {{$netImage}}

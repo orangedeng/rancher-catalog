@@ -6,10 +6,10 @@ Rancher networking plugin using IPsec.
 
 Traffic to and from hosts require UDP ports `500` and `4500` to be open.
 
-### Changelog - 0.2.1
+### Changelog - 0.2.2
 
-#### Router and CNI Driver [rancher/net:v0.13.5]
-* Fixed memory leak issue.
+#### Router and CNI Driver [rancher/net:v0.13.6]
+* Introduced connectivity check for ipsec.
 
 ### Configuration options
 * `RANCHER_DEBUG`
