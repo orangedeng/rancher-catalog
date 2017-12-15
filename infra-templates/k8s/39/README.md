@@ -11,7 +11,8 @@ Warning: The existing template version _must be_ `v1.2.4-rancher9` or later. Ign
 
 ### Changelog for Kubernetes v1.8.5
 
-* Added ability to check add-on versions before upgrading add-ons.
+* Added ability to check the versions of add-ons so they are not upgraded if they had been independently upgraded 
+* Added ability to keep config map for SkyDNS if it was set
 * Added ability to configure dashboard resource limits.
 * Added open-iscsi package.
 * Added support for Azure vnet in another resource group.
