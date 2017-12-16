@@ -1,6 +1,6 @@
 version: '2'
 
-{{- $netImage:="rancher/net:v0.13.6" }}
+{{- $netImage:="rancher/net:v0.13.7" }}
 
 services:
   ipsec:
@@ -45,6 +45,8 @@ services:
     image: {{$netImage}}
     command:
       - connectivity-check
+    environment:
+      RANCHER_DEBUG: '${RANCHER_DEBUG}'
     network_mode: container:ipsec
   cni-driver:
     privileged: true
