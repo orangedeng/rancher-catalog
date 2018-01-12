@@ -1,8 +1,7 @@
 .catalog:
   name: "Rancher IPsec"
-  version: "0.2.2"
-  minimum_rancher_version: v1.6.13-rc1
-  maximum_rancher_version: v1.6.14
+  version: "0.2.3"
+  minimum_rancher_version: v1.6.15-rc1
   questions:
     - variable: "DOCKER_BRIDGE"
       label: "Docker Bridge"
@@ -22,6 +21,18 @@
       type: "string"
       default: '10.42.0.0/16'
       required: true
+    - variable: "SUBNET_START_ADDRESS"
+      label: "Subnet start IP Address"
+      description: "This is an advanced setting and most users will not need to use this. Incorrect values can break your Rancher installation."
+      type: "string"
+      default: ''
+      required: false
+    - variable: "SUBNET_END_ADDRESS"
+      label: "Subnet end IP Address"
+      description: "This is an advanced setting and most users will not need to use this. Incorrect values can break your Rancher installation."
+      type: "string"
+      default: ''
+      required: false
     - variable: "SUBNET_PREFIX"
       label: "IPAM Subnet Prefix"
       description: "The Subnet prefix to use for the managed network. For most users this is same as the bridge subnet prefix. Ex: 16 if using 10.42.0.0/16 for bridge subnet."
@@ -60,17 +71,22 @@
       required: true
     - variable: "IPSEC_IKE_SA_REKEY_INTERVAL"
       label: "IPSec IKE_SA rekey interval"
-      description: "Proceed with caution; typical users will not need to change this. Incorrect values can break your Rancher installation."
+      description: "This is an advanced setting and most users will not need to use this. Incorrect values can break your Rancher installation."
       type: "string"
       default: '4h'
       required: true
     - variable: "IPSEC_CHILD_SA_REKEY_INTERVAL"
       label: "IPSec CHILD_SA rekey time"
-      description: "Proceed with caution; typical users will not need to change this. Incorrect values can break your Rancher installation."
+      description: "This is an advanced setting and most users will not need to use this. Incorrect values can break your Rancher installation."
       type: "string"
       default: '1h'
       required: true
-
+    - variable: "RANCHER_IPSEC_PSK"
+      label: "PSK for IPSec"
+      description: "This is an advanced setting and most users will not need to use this. Incorrect values can break your Rancher installation."
+      type: "string"
+      default: ''
+      required: false
 ipsec:
   health_check:
     request_line: GET "/connectivity" "HTTP/1.0"
