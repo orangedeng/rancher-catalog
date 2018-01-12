@@ -213,6 +213,7 @@ kubernetes:
         - --tls-cert-file=/etc/kubernetes/ssl/cert.pem
         - --tls-private-key-file=/etc/kubernetes/ssl/key.pem
         - --runtime-config=batch/v2alpha1
+        - --anonymous-auth=false
         - --authentication-token-webhook-config-file=/etc/kubernetes/authconfig
         - --runtime-config=authentication.k8s.io/v1beta1=true
         - --external-hostname=kubernetes.kubernetes.rancher.internal
