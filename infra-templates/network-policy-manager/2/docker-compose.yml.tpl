@@ -1,10 +1,13 @@
 version: '2'
+
+{{- $npmImage:="rancher/network-policy-manager:v0.2.5" }}
+
 services:
   network-policy-manager:
     privileged: true
     network_mode: host
     pid: host
-    image: rancher/network-policy-manager:v0.2.4
+    image: {{$npmImage}}
     labels:
       io.rancher.scheduler.global: 'true'
     logging:

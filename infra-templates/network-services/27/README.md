@@ -6,12 +6,13 @@ This stack provides the following services:
 * DNS
 * Network Manager
 
-### Changelog for v0.2.8
+### Changelog for v0.2.9
 
-#### Network Manager [rancher/network-manager:v0.7.19]
-* Fixed issue with a new host added takes time to be active
+#### Metadata [rancher/metadata:v0.10.1]
+* Added regions support
 
-#### Metadata [rancher/metadata:v0.9.5]
+#### DNS [rancher/dns:v0.17.1]
+* Added regions support
 
 ### Configuration Options
 

@@ -1,6 +1,6 @@
 version: '2'
 
-{{- $netImage:="rancher/net:v0.13.7" }}
+{{- $netImage:="rancher/net:v0.13.8" }}
 
 services:
   ipsec:
@@ -28,6 +28,7 @@ services:
       IPSEC_REPLAY_WINDOW_SIZE: '${IPSEC_REPLAY_WINDOW_SIZE}'
       IPSEC_IKE_SA_REKEY_INTERVAL: '${IPSEC_IKE_SA_REKEY_INTERVAL}'
       IPSEC_CHILD_SA_REKEY_INTERVAL: '${IPSEC_CHILD_SA_REKEY_INTERVAL}'
+      RANCHER_IPSEC_PSK: '${RANCHER_IPSEC_PSK}'
     labels:
       io.rancher.container.create_agent: 'true'
       io.rancher.container.agent_service.ipsec: 'true'
@@ -75,6 +76,8 @@ services:
         host_ports: {{ .Values.HOST_PORTS }}
         subnets:
         - network_address: $SUBNET
+          start_address: $SUBNET_START_ADDRESS
+          end_address: $SUBNET_END_ADDRESS
         dns:
         - 169.254.169.250
         dns_search:

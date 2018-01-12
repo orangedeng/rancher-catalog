@@ -6,11 +6,11 @@ Rancher networking plugin using IPsec.
 
 Traffic to and from hosts require UDP ports `500` and `4500` to be open.
 
-### Changelog - 0.2.2
+### Changelog - 0.2.3
 
-#### Router and CNI Driver [rancher/net:v0.13.7]
-* Introduced connectivity check for ipsec.
-* Fixed an issue where scheduler IPs could be picked up as the IP for the ipsec service for ports `500` and `4500`, which would cause cross host communication to no longer work for that host
+#### Router, CNI Driver, Connectivity Check [rancher/net:v0.13.8]
+* Added support for regions
+* Reduced the logging level for ipsec
 
 ### Configuration options
 * `RANCHER_DEBUG`
@@ -20,12 +20,15 @@ Traffic to and from hosts require UDP ports `500` and `4500` to be open.
 * `IPSEC_REPLAY_WINDOW_SIZE`
 * `IPSEC_IKE_SA_REKEY_INTERVAL`
 * `IPSEC_CHILD_SA_REKEY_INTERVAL`
+* `RANCHER_IPSEC_PSK`
 
 #### cni-driver
 
 * `DOCKER_BRIDGE`
 * `MTU`
 * `SUBNET`
+* `SUBNET_START_ADDRESS`
+* `SUBNET_END_ADDRESS`
 * `RANCHER_HAIRPIN_MODE`
 * `RANCHER_PROMISCUOUS_MODE`
 * `HOST_PORTS`
