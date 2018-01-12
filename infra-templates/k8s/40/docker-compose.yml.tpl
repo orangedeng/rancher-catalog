@@ -199,6 +199,7 @@ kubernetes:
     command:
         - kube-apiserver
         - --storage-backend=etcd2
+        - --storage-media-type=application/json
         - --service-cluster-ip-range=${SERVICE_CLUSTER_CIDR}
         - --etcd-servers=http://etcd.kubernetes.rancher.internal:2379
         - --insecure-bind-address=0.0.0.0
