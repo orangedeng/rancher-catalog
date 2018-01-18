@@ -220,6 +220,7 @@ kubernetes:
         - --external-hostname=kubernetes.kubernetes.rancher.internal
         {{- if eq .Values.AUDIT_LOGS "true" }}
         - --audit-log-path=-
+        - --feature-gates=AdvancedAuditing=false
         {{- end }}
         {{- if eq .Values.RBAC "true" }}
         - --authorization-mode=RBAC
