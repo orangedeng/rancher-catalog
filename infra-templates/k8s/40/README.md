@@ -1,15 +1,15 @@
-## Kubernetes v1.9.1
+## Kubernetes v1.9.2
 
 ### Software Versions
 
-* Kubernetes v1.9.1
+* Kubernetes v1.9.2
 * Etcd v2.3.7
 
 ### Upgrading to this Version
 
 Warning: The existing template version _must be_ `v1.2.4-rancher9` or later. Ignoring this will result in data loss. For older templates, please first upgrade to `v1.5.4-rancher1`.
 
-### Changelog for Kubernetes v1.9.1
+### Changelog for Kubernetes v1.9.2
 
 *
 

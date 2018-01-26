@@ -1,5 +1,5 @@
 
-{{- $k8sImage:="rancher/k8s:v1.9.1-rancher1-1" }}
+{{- $k8sImage:="rancher/k8s:v1.9.2-rancher1-1" }}
 {{- $etcdImage:="rancher/etcd:v2.3.7-13" }}
 {{- $kubectldImage:="rancher/kubectld:v0.8.6" }}
 {{- $etcHostUpdaterImage:="rancher/etc-host-updater:v0.0.3" }}
