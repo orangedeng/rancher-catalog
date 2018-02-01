@@ -145,8 +145,8 @@
     required: false
     default:  NamespaceLifecycle,LimitRanger,ServiceAccount,PersistentVolumeLabel,DefaultStorageClass,DefaultTolerationSeconds,ResourceQuota
     type: string
-  - variable: SERVICE_CLUSTER_CIDR
-    label: Service Cluster IP CIDR
+  - variable: SERVICE_CLUSTER_IP_RANGE
+    label: Service Cluster IP Range
     description: A CIDR notation IP range from which to assign service cluster IPs. This must not overlap with any IP ranges assigned to the cluster pod IP CIDR (10.42.0.0/16).
     required: true
     default: "10.43.0.0/16"

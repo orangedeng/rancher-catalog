@@ -11,7 +11,7 @@ Warning: The existing template version _must be_ `v1.2.4-rancher9` or later. Ign
 
 ### Changelog for Kubernetes v1.9.2
 
-*
+* Fixed issue with conntrack entries being deleted incorrectly for Service IP range.
 
 ### Required Open Ports on hosts
 
