@@ -8,7 +8,7 @@ This stack provides the following services:
 
 ### Changelog for v0.2.9
 
-#### Metadata [rancher/metadata:v0.10.1]
+#### Metadata [rancher/metadata:v0.10.2]
 * Added regions support
 
 #### DNS [rancher/dns:v0.17.1]
