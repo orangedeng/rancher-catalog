@@ -237,6 +237,8 @@ kubernetes:
         sans:
         - "IP:${KUBEAPI_CLUSTER_IP}"
         - "kubernetes.default.svc.cluster.local"
+        - "kubernetes.default.svc.cluster"
+        - "kubernetes.default.svc"
     health_check:
         port: 6443
         interval: 2000
