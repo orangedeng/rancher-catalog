@@ -196,12 +196,12 @@ kubernetes:
         io.rancher.sidekicks: kube-hostname-updater
         io.rancher.websocket.proxy.port: "6443"
         io.rancher.websocket.proxy.scheme: "https"
-        io.rancher.k8s.service.cluster.ip.range: ${SERVICE_CLUSTER_IP_RANGE}
+        io.rancher.k8s.service.cluster.ip.range: ${SERVICE_CLUSTER_CIDR}
     command:
         - kube-apiserver
         - --storage-backend=etcd2
         - --storage-media-type=application/json
-        - --service-cluster-ip-range=${SERVICE_CLUSTER_IP_RANGE}
+        - --service-cluster-ip-range=${SERVICE_CLUSTER_CIDR}
         - --etcd-servers=http://etcd.kubernetes.rancher.internal:2379
         - --insecure-bind-address=0.0.0.0
         - --insecure-port=0
