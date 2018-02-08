@@ -1,5 +1,5 @@
 
-{{- $k8sImage:="rancher/k8s:v1.9.2-rancher1-1" }}
+{{- $k8sImage:="rancher/k8s:v1.9.2-rancher1-2" }}
 {{- $etcdImage:="rancher/etcd:v2.3.7-13" }}
 {{- $kubectldImage:="rancher/kubectld:v0.8.6" }}
 {{- $etcHostUpdaterImage:="rancher/etc-host-updater:v0.0.3" }}
@@ -196,12 +196,12 @@ kubernetes:
         io.rancher.sidekicks: kube-hostname-updater
         io.rancher.websocket.proxy.port: "6443"
         io.rancher.websocket.proxy.scheme: "https"
-        io.rancher.k8s.service.cluster.ip.range: ${SERVICE_CLUSTER_IP_RANGE}
+        io.rancher.k8s.service.cluster.ip.range: ${SERVICE_CLUSTER_CIDR}
     command:
         - kube-apiserver
         - --storage-backend=etcd2
         - --storage-media-type=application/json
-        - --service-cluster-ip-range=${SERVICE_CLUSTER_IP_RANGE}
+        - --service-cluster-ip-range=${SERVICE_CLUSTER_CIDR}
         - --etcd-servers=http://etcd.kubernetes.rancher.internal:2379
         - --insecure-bind-address=0.0.0.0
         - --insecure-port=0
