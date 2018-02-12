@@ -1,9 +1,13 @@
 ## Rancher Container Crontab
 Starts, stops or restarts containers in your environment
 
+### Changelog - v0.4.0
+
+* Fixed cron scheduling for sidekicks
+
 ### Usage
 
-This service deploys globally, and listens on the Docker socket for start/create/destroy events. 
+This service deploys globally, and listens on the Docker socket for start/create/destroy events.
 If the container is part of a service, container-crontab will verify that the service is in an
 `active` state. If it isn't the job will be ignored. Keep in mind that services that are waiting
 for upgrade confirmation, will not have cron jobs run.

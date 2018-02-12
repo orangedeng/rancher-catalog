@@ -9,10 +9,10 @@ This stack provides the following services:
 ### Changelog for v0.2.9
 
 #### Metadata [rancher/metadata:v0.10.2]
-* Added regions support
+* Small bug fixes
 
 #### DNS [rancher/dns:v0.17.1]
-* Added regions support
+* Small bug fixes
 
 #### Network Manager [rancher/network-manager:v0.7.20]
 * Fixes issue during startup of healthcheck not able to reach server.
