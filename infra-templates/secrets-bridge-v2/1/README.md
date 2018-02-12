@@ -1,8 +1,11 @@
-# Rancher Secrets Bridge v2 - Experimental Version
+# Rancher Secrets Bridge v2
 
 ## Purpose
 
 This volume driver delivers access tokens per-container to authenticate with Hashicorp Vault.
+
+## Changelog v0.3.0
+
 
 ## Terms
 
