@@ -27,7 +27,7 @@ services:
   windows-dns:
     image: {{$windowsDNSImage}}
     network_mode: transparent
-    command: c:\\rancher-dns.exe --listen=169.254.169.251:53 --metadata-server=169.254.169.250:80 --answers=C:\\answers.json --recurser-timeout=${DNS_RECURSER_TIMEOUT} --ttl=${TTL}
+    command: c:\\rancher-dns.exe --listen=169.254.169.251:53 --metadata-server=169.254.169.250:80 --answers=C:\\answers.json --recurser-timeout=${DNS_RECURSER_TIMEOUT} --ttl=${TTL} --never-recurse-to=169.254.169.251
     labels:
       io.rancher.scheduler.affinity:host_label: io.rancher.host.os=windows
       io.rancher.scheduler.global: 'true'

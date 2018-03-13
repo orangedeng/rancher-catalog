@@ -5,12 +5,10 @@ This stack provides the following services:
 * Metadata
 * DNS
 
-#### Metadata [rancher/metadata-windows:v0.10.0]
-* Use microsoft/nanoserver as base image and rebuild metadata service.
+### Changelog for v0.2.0
 
 #### DNS [rancher/dns-windows:v0.17.0]
-* Use microsoft/nanoserver as base image and rebuild DNS service.
-* In Windows environment, DNS server address will be 169.254.169.251
+* Add Parameter `--never-recurse-to=169.254.169.251` to DNS service
 
 ### Configuration Options
 
